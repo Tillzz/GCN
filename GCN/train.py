@@ -98,7 +98,4 @@ print("Total tie elapsed: {:.4f}".format(time.time() - t_total))
 # Testing
 test()
 
-
-#Finished on 2022.9.12
-
-
+# Finished on 2022.9.12

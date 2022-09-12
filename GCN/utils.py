@@ -6,8 +6,8 @@ import torch
 def encode_onehot(lables):
     classes = set(lables)
     classes_dict = {c: np.identity(len(classes))[i, :] for i, c in enumerate(classes)}
-    lables_onthot = np.array(list(map(classes_dict.get, lables)), dtype=np.int32)
-    return lables_onthot
+    lables_onehot = np.array(list(map(classes_dict.get, lables)), dtype=np.int32)
+    return lables_onehot
 
 
 def load_data(path="../data/cora/", dataset="cora"):
@@ -67,5 +67,4 @@ def sparse_mx_to_torch_sparse_tensor(spare_mx):
     shape = torch.Size(spare_mx.shape)
     return torch.sparse.FloatTensor(indices, values, shape)
 
-
-#Finished on 2022.9.9
+# Finished on 2022.9.9
